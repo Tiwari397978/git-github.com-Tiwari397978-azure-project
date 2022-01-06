@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>User List</title>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/cdn/view_model/searchUserViewModel.js" ></script>
+    
+  </head>
+
+<body>
+    <h1>Hiking App Users:</h1>
+    <input type="text" id="search-text" placeholder="Find Users" value=""> <label for="type">Filter:</label>
+
+    <select name="studentAttributes" id="categories">
+        <option value="Username">Username</option>
+        <option value="Email Address">Email Address</option>
+    </select>
+
+    <ol id="userList">
+    </ol>
+
+</body>
+
+</html>

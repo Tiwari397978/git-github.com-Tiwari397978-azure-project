@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Group Chat Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/cdn/view_model/createGroup.js" ></script>
+    <link href="/cdn/resources/covidQuestions.css" rel="stylesheet" />
+
+</head>
+
+<style> 
+    textarea {
+      width: 42%;
+      height: 100px;
+      padding: 5px 10px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+    }
+    input{
+      padding: 5px 10px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+    }
+
+    description{
+      height:250px;
+      width: 150px;
+    }    
+</style>
+
+<body >
+
+  <div class="navbar">
+    <a href='/myGroups'><i class="fa fa-fw fa-group"></i> Your Groups</a> 
+    <a href='/group/create-group'><i class="fa fa-fw fa-plus"></i> Create Group</a> 
+    <a href='/group/search-group'><i class="fa fa-fw fa-search"></i> Search Groups</a> 
+    <a href='/invitations/'><i class="fa fa-fw fa-envelope"></i> Invitations</a> 
+    <a href='/covid-questions/'><i class="fa fa-fw fa-stethoscope"></i> COVID-19 Screening</a> 
+    <a href='/activities/'><i class="fa fa-fw fa-list"></i> Activity Log</a> 
+  </div>
+
+    <form id = "group-details" name='group-info' action="/group/add-group" method="post">
+        <label for="groupName"class="error" >Group Name:</label><br>
+        <input type="text" id="groupName_" name = "groupName" placeholder="Enter group name ..." class="form-control" size = '25' minlength="2" maxlength="20"  pattern="[a-zA-Z'-'\s]*" onkeyup="manage(this)" onfocusout="validateName()" ><br>
+
+        <label for="location" >Location:</label><br>
+        <input type="text" id="location" name= "location" placeholder="Enter general location for hiking trails ..." size = '25' minlength="20" maxlength="50" pattern="[a-zA-Z'-'\s]*" onkeyup="manage(this)" ><br>
+
+        <label for="d" >Description:</label><br>
+        <input id="description" name= "description" placeholder="Group description ..." size = '25' minlength="20" maxlength="600" pattern="[a-zA-Z'-'\s]*" onkeyup="manage(this)" ><br>
+
+        <input type="submit" id="submit-groupDetails" value="Submit" disabled >
+    </form> 
+
+    <div class="footer">
+      <form id = "log_Out" name='logout' action="/logout" method="get">
+        <input type="submit" id="log_Out" value="Logout" >
+      </form>
+    </div>
+
+</body>
+
+
+</html>

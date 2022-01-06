@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<title> 
+    Activities
+</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="/cdn/view_model/myActivities.js" ></script>
+  
+</head>
+<style>
+  input{
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+
+  /* This is implementation of the footers' attributes */
+.footer {
+ position: fixed;
+ left: 0;
+ bottom: 0;
+ height: 40px;
+ width: 100%;
+ background-color: #555;
+ text-align: right;
+}
+
+h {
+  color: rgb(88, 20, 20);
+  font-family: verdana;
+  font-size: 150%;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+
+</style>
+<body>
+
+  <div class="navbar">
+        <a href='/myGroups'><i class="fa fa-fw fa-group"></i> Your Groups</a> 
+        <a href='/group/create-group'><i class="fa fa-fw fa-plus"></i> Create Group</a> 
+        <a href='/group/search-group'><i class="fa fa-fw fa-search"></i> Search Groups</a> 
+        <a href='/invitations/'><i class="fa fa-fw fa-envelope"></i> Invitations</a> 
+        <a href='/covid-questions/'><i class="fa fa-fw fa-stethoscope"></i> COVID-19 Screening</a> 
+        <a href='/activities/'><i class="fa fa-fw fa-list"></i> Activity Log</a> 
+      </div>
+
+    <h3>Activities Log</h3>
+    <ul id="myActivities">
+    </ul>
+
+    <div class="footer">
+      <form id = "log_Out" name='logout' action="/logout" method="get">
+        <input type="submit" id="log_Out" value="Logout" >
+      </form>
+    </div>
+</body>

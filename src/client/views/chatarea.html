@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Group Chat</title>
+<script src="/cdn/model/chatarea.js" ></script>
+<script src="../../dist/bundle.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../resources/chatarea-style.css" />
+
+
+</head>
+
+<body>
+      <div id="main-div" class="container div-border">
+            <div class="row">
+
+
+                <div id="chat-area" class="col-7 div-border-msg position-relative">
+                    <div id="top-bar" class="row justify-content-between">
+                        <div id="chat-group-name" class="col-6">
+                           <h2 id="group-name" class="nm-group-heading"></h2>
+                        </div>
+                        <div id="chat-side-button" class="col-3"> 
+                             <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Group Options
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#" onclick = 'viewGroup()' id="view-description">View Group Description </a>
+                                    <a class="dropdown-item" href="/view/view-members" id="view-members">View Members</a>
+                                    <a class="dropdown-item" href="/user/" id="invite-user"> Invite Member </a
+                   
+                                ></div>
+                             </div>
+                        </div>
+                    </div>
+                    <div id="message-area" class="message-scroll">
+                     
+                       
+                    </div>
+                    <div class="type-space-position">
+                           <form  class="bg-light" id="group-chat">
+                                <div class="input-group">
+                                    <input type="text" id="content" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 bg-light">
+                                    <div class="input-group-append">
+                                         <button type="button" id="send-button" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
+                                     </div>
+                                </div>
+                           </form>
+                    </div>
+                    
+                </div>
+            </div>
+      </div>
+</body>
+
+</html>

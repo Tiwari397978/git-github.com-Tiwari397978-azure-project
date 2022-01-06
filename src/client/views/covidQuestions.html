@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link href="/cdn/resources/covidQuestions.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href='/myGroups'><i class="fa fa-fw fa-group"></i> Your Groups</a> 
+        <a href='/group/create-group'><i class="fa fa-fw fa-plus"></i> Create Group</a> 
+        <a href='/group/search-group'><i class="fa fa-fw fa-search"></i> Search Groups</a> 
+        <a href='/invitations/'><i class="fa fa-fw fa-envelope"></i> Invitations</a> 
+        <a href='/covid-questions/'><i class="fa fa-fw fa-stethoscope"></i> COVID-19 Screening</a> 
+        <a href='/activities/'><i class="fa fa-fw fa-list"></i> Activity Log</a> 
+      </div>
+
+    <h1>University COVID Questionnaire</h1>
+
+    <p>Please complete all the questions below and submit your response. Respond with either a Yes or No.</p>
+
+    <div class="questions">
+
+        <table style="width:60%">
+            <tr>
+                <th>Condition/Sympton</th>
+                <th>Yes/No</th>
+            </tr>
+            <tr>
+                <td>Are you suffering from fever / high temperature or temperature fluctuations?</td>
+                <td>
+                    <select name="response" id="temperature">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Do you have a dry cough?</td>
+                <td>
+                    <select name="response" id="cough">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Do you have a sore throat?</td>
+                <td>
+                    <select name="response" id="throat">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Do you have redness of eyes?</td>
+                <td>
+                    <select name="response" id="eyes">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Are you experiencing shortness of breath / difficulty in breathing?</td>
+                <td>
+                    <select name="response" id="breathing">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Have you got unusual body aches / muscle pain?</td>
+                <td>
+                    <select name="response" id="pain">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Are you experiencing a loss of smell / taste?</td>
+                <td>
+                    <select name="response" id="senses">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Are you nauseous and/or do you experience unusual vomiting?</td>
+                <td>
+                    <select name="response" id="nauseous">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Have you experienced diarrhea recently?</td>
+                <td>
+                    <select name="response" id="diarrhea">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    <div><input id="submitButton" type="button" value="Submit"> </div>
+    </div>
+    <script src="/cdn/view_model/covidQuestionsViewModel.js"></script>
+
+    <div class="footer">
+        <form id = "log_Out" name='logout' action="/logout" method="get">
+          <input type="submit" id="log_Out" value="Logout" >
+        </form>
+      </div>
+</body>
+
+</html>

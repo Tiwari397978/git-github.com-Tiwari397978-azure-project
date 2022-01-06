@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" type="image/png" href="img/icon2.png" />
+
+  <title>View Group Info</title>
+  <!-- <script src="/cdn/view_model/groupPage.js" ></script> -->
+  <script>
+    let groupDetails = []
+
+    //to be edited by server when sent to client (contains group page name) 
+    //NEEDS to be changed when javascript is moved to separate file!
+    const groupName = 'groupNamePlaceholder'
+
+    document.addEventListener('DOMContentLoaded', async () => {
+
+      const response = await fetch(`/view/fetch-details:${groupName}`)
+      groupDetails = await response.json()
+      display(groupDetails)
+    }, false)
+
+    function display(groupDetails) {
+      // console.log(groupDetails.groupN)
+      const groupname = document.createElement('p')
+      const name = document.createTextNode(`${groupDetails[0].groupName}`)
+      const groupnameTitle = document.createTextNode('Group name: ')
+      groupname.appendChild(groupnameTitle)
+      groupname.appendChild(name)
+      document.getElementsByTagName('body')[0].appendChild(groupname)
+
+      const groupDescription = document.createElement('p')
+      const description = document.createTextNode(`${groupDetails[0].groupDescription}`)
+      const groupDescriptionTitle = document.createTextNode('Group description: ')
+      groupDescription.appendChild(groupDescriptionTitle)
+      groupDescription.appendChild(description)
+
+      document.getElementsByTagName('body')[0].appendChild(groupDescription)
+
+      const groupLocation = document.createElement('p')
+      const location = document.createTextNode(`${groupDetails[0].generalLocation}`)
+      const groupLocationTitle = document.createTextNode('Group location: ')
+      groupLocation.appendChild(groupLocationTitle)
+      groupLocation.appendChild(location)
+
+      document.getElementsByTagName('body')[0].appendChild(groupLocation)
+
+      // // creating memebers button and attaching event listening to display list of members on click
+      // let membersButton = document.createElement('button')
+      // membersButton.setAttribute('id', 'membersButton')
+      // membersButton.innerHTML = 'Show Group Members'
+      // membersButton.value = 'show'
+      // document.getElementsByTagName('body')[0].appendChild(membersButton)
+      // document.getElementsByTagName('body')[0].append(document.createElement('p'))
+
+      // membersButton.addEventListener('click', () => {
+
+      //   if (membersButton.value === 'show') {
+      //     // changing button to notify client it will now hide group members
+      //     membersButton.value = 'hidden'
+      //     membersButton.innerHTML = 'Hide Group Members'
+
+      //     // creating elements to display list of group members
+      //     const listContainer = document.createElement('div')
+      //     const title = document.createTextNode('Members: ')
+      //     document.getElementsByTagName('body')[0].append(title)
+      //     document.getElementsByTagName('body')[0].appendChild(listContainer)
+      //     let membersList = document.createElement('ul')
+
+      //     // list of members is appended to group details
+      //     const members = groupDetails[1]
+
+      //     // for each members create a list item and append it to the group members list
+      //     members.forEach((member) => {
+      //       let members = document.createElement("li")
+      //       members.innerText = `Username: ${member.username}`
+      //       members.innerText += ', Rating: ' + member.rating
+      //       membersList.appendChild(members)
+      //     })
+
+      //     // display group member's list
+      //     document.body.appendChild(membersList)
+      //   }
+      //   else if (membersButton.value === 'hidden') {
+      //     // clearing page
+      //     document.body.innerHTML = ''
+
+      //     // displaying just group details again
+      //     display(groupDetails)
+      //   }
+      // })
+
+    }
+  </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

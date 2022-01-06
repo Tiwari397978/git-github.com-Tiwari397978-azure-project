@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login Page</title>
+    <meta charset="utf-8" />
+    <!-- setting page size to device screen dimensions -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fething Bootstrap 5 CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fetching custom CSS styling from resource -->
+    <link rel="stylesheet" href="/cdn/resources/loginPage-style.css">
+</head>
+
+<body class="body-gradient-custom">
+
+    <!-- login classes needed for centering elements - html and body height required to be 100%  -->
+    <div id="login" class="h-100 d-flex flex-column align-items-center justify-content-center">
+        <h1 id="login-heading" class="display-1 mb-5">Hiking Organiser</h1>
+
+        <div id="login-input-container" class="input-group-vertical w-25 mb-3">
+            <input id="login-username" type="text" placeholder="Username"
+                class="form-control form-control-lg mb-2 field-gradient-custom">
+
+            <input id="login-password" type="password" placeholder="Password"
+                class="form-control form-control-lg field-gradient-custom">
+        </div>
+        <!-- toggle switch -->
+        <div id="login-view-password-toggle-container" class="form-check form-switch form-switch-lg mb-5">
+            <input id="login-view-password-toggle" type="checkbox" placeholder="viewPass" class="form-check-input">
+            <label id="login-view-password-toggle-label" class="form-check-label">Hiding Password</label>
+        </div>
+
+        <!-- future implementation -->
+        <!-- <div class="material-switch mb-5">
+            <input id="switch-danger" name="switch-danger" type="checkbox">
+            <label for="switch-danger" class="danger-color">Viewing Password</label>
+        </div> -->
+
+        <!-- container stacks buttons vertically -->
+        <div id="login-buttons-container" class="d-grid gap-2 col-2" role="group">
+            <a id="login-button" class="btn btn-success btn-lg">Log In</a>
+
+            <a id="register-open-button" class="btn btn-secondary btn-lg" data-bs-toggle="modal"
+                data-bs-target="#register">Register A New Account</a>
+        </div>
+
+        <div class="spinner-space-lg justify-content-center mt-5">
+            <!-- needs inline styling -->
+            <div id="login-spinner" style="width: 2.5rem; height: 2.5rem;"
+                class="spinner-lg spinner-border visually-hidden" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Popup Modal -->
+    <div id="register" class="modal fade" tabindex="-1" aria-labelledby="register-FormLabel" aria-hidden="true">
+        <div id="register-format" class="modal-dialog modal-dialog-centered modal-lg">
+            <!-- removed borders from elemnts to get rid of white lines -->
+            <div id="register-container" class="modal-content body-gradient-custom">
+                <div class="spinner-space mb-4 d-flex d-flex justify-content-end">
+                    <button id="register-close-button" type="button" class="btn-close btn-close-lg btn-close-white me-4 mt-4"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="register-header-container" class="modal-header border-0 justify-content-center mb-5">
+                    <h5 id="register-title" class="modal-title display-5 position-absolute" id="registerFormLabel">
+                        Register A New Account
+                    </h5>
+                </div>
+                <div id="register-body" class="modal-body large-font-size border-0">
+                    <div id="register-response"></div>
+                    <div id="register-input-container" class="input-group-vertical w-50 mb-3 mx-auto">
+                        <input id="register-username" type="text" placeholder="Username"
+                            class="form-control form-control-lg mb-2 field-gradient-custom">
+
+                        <input id="register-email" type="text" placeholder="Email"
+                            class="form-control form-control-lg mb-2 field-gradient-custom">
+
+                        <input id="register-password" type="password" placeholder="Password"
+                            class="form-control form-control-lg mb-2 field-gradient-custom">
+
+                        <input id="register-confirm-password" type="password" placeholder="Confirm Password"
+                            class="form-control form-control-lg field-gradient-custom">
+                    </div>
+                    <!-- response will be appened here as an alert -->
+                    <div id="register-button-container" class="d-flex justify-content-center">
+                        <!-- toggle switch -->
+                        <div id="register-view-password-toggle-container"
+                            class="form-check form-switch form-switch-md mb-3">
+                            <input id="register-view-password-toggle" type="checkbox" class="form-check-input">
+                            <label id="register-view-password-toggle-label" class="form-check-label">Hiding
+                                Password</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="register-footer-container" class="modal-footer justify-content-center border-0">
+                    <button id="register-button" type="button" class="btn btn-success btn-lg w-25 mb-3">Sign Up</button>
+                </div>
+                <div class="spinner-space d-flex justify-content-center mb-4">
+                    <!-- needs inline styling -->
+                    <div id="register-spinner" class="spinner-border visually-hidden" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Files Should Be At The Bottom As Only One File Can Be Loaded At A Time -->
+    <script src="/cdn/view_model/credentialsViewModel.js"></script>
+
+    <!-- fething Bootstrap 5 Javascript Modules from CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

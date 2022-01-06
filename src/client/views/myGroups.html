@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<title> 
+    My Groups
+</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+  <link href="/cdn/resources/covidQuestions.css" rel="stylesheet" />
+  <script src="/cdn/view_model/myGroups.js" ></script>
+  
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href='/myGroups'><i class="fa fa-fw fa-group"></i> Your Groups</a> 
+    <a href='/group/create-group'><i class="fa fa-fw fa-plus"></i> Create Group</a> 
+    <a href='/group/search-group'><i class="fa fa-fw fa-search"></i> Search Groups</a> 
+    <a href='/invitations/'><i class="fa fa-fw fa-envelope"></i> Invitations</a> 
+    <a href='/covid-questions/'><i class="fa fa-fw fa-stethoscope"></i> COVID-19 Screening</a> 
+    <a href='/activities/'><i class="fa fa-fw fa-list"></i> Activity Log</a> 
+  </div>
+
+    <h1>My Groups:</h1>
+    <ol id="myGroups">
+    </ol>
+
+    <div class="footer">
+      <form id = "log_Out" name='logout' action="/logout" method="get">
+        <input type="submit" id="log_Out" value="Logout" >
+      </form>
+    </div>
+</body>
+
+<!-- sessionStorage.getItem("SessionName") -->

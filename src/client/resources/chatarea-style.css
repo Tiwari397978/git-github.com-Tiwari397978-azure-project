@@ -1,0 +1,114 @@
+.div-border {
+    width: 1360px;
+    height: 760px;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0;
+  }
+
+.div-border-msg{
+    width: 864px;
+    height: 720px;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0;
+}
+.div-search-bar{
+    text-align: left;
+    margin:20px;
+}
+.div-border-side{
+    width: 490px;
+    height: 720px;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 0;
+}
+
+
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+body{
+    margin: 60px;
+}
+
+.bottom-bar{
+    position:absolute;
+    bottom:0;    
+}
+
+.chat-area{
+    position:relative;
+    
+}
+
+.chat-right{
+    border-radius: 25px;
+    border: 2px beige;
+    padding: 2px;
+    width:300px;
+    height:100px;
+    background-color: gray;
+}
+
+.chat-left{
+    border-radius: 25px;
+    border: 2px beige;
+    padding: 2px;
+    width:300px;
+    height:100px;
+    background-color: lightgray;
+}
+
+.s{
+    font: italic small-caps bold 12px/30px Georgia, serif;
+}
+
+.nm{
+    font: 15px Arial, sans-serif;
+    text-decoration: underline;
+}
+.nm-group-heading{
+    font:45px Arial, sans-serif;
+    text-decoration: underline;
+}
+
+.namepadding{
+    padding-left: 17px;
+}
+
+.type-space-position{
+    position: absolute;
+    bottom: 0;
+    width: 580px;
+    padding: 2px;
+}
+
+.message-scroll {
+    height:550px;
+    overflow-y: scroll;
+  }
+.user-list-div{
+    height: 400px;
+    overflow-y: scroll;
+}
+
+  div::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  div::-webkit-scrollbar-track {
+    background: whitesmoke;        /* color of the tracking area */
+  }
+  
+  div::-webkit-scrollbar-thumb {
+    background-color: grey;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid grey;  /* creates padding around scroll thumb */
+  }

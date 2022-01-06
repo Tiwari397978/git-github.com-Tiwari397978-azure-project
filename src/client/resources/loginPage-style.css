@@ -1,0 +1,147 @@
+html {
+    height: 100%;
+}
+
+.body-gradient-custom {
+    /* alternative (fallback) standard colour */
+    background: #292929;
+    /* Gradient Colour */
+    /*Supported by Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(187deg, rgba(41, 41, 41, 1) 45%, rgba(55, 55, 55, 1) 71%, rgba(56, 56, 56, 1) 100%);
+    /*Supported by: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(187deg, rgba(41, 41, 41, 1) 45%, rgba(55, 55, 55, 1) 71%, rgba(56, 56, 56, 1) 100%);
+}
+
+.field-gradient-custom {
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(227, 227, 227, 1))
+}
+
+body {
+    height: 100%;
+    color: #fff;
+    /* background: #292929; */
+}
+
+/* Change Autocomplete styles in Chrome*/
+
+input:-webkit-autofill::first-line, input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !important;
+}
+
+/* Change Autocomplete font size to match input field in Chrome */
+
+input:-webkit-autofill::first-line {
+    font-size: 20px
+}
+
+/* reserve space for hiding and showing spinner (for dynamic formatting) */
+
+.spinner-space {
+    height: 2em;
+}
+
+.spinner-space-lg {
+    height: 3em;
+}
+
+/* custom margin spacing */
+
+.mt-6 {
+    margin-top: 10em !important;
+}
+
+.mb-6 {
+    margin-bottom: 10em !important;
+}
+
+.form-switch.form-switch-md {
+    padding-left: 4.5em;
+    height: 1.4em;
+}
+
+.form-switch.form-switch-md .form-check-input {
+    margin-left: -4.5em;
+    height: 1.4em;
+    width: 3.5em;
+    padding-bottom: 1.6em;
+}
+
+.form-switch.form-switch-md .form-check-label {
+    font-size: 1.5rem;
+    padding-top: 0em;
+}
+
+.form-switch.form-switch-lg {
+    padding-left: 4.5em;
+    height: 1.4em;
+}
+
+.form-switch.form-switch-lg .form-check-input {
+    margin-left: -4.5em;
+    height: 1.4em;
+    width: 3.5em;
+    padding-bottom: 1.6em;
+}
+
+.form-switch.form-switch-lg .form-check-label {
+    font-size: 1.5rem;
+    padding-top: 0em;
+}
+
+/* NOT USED YET */
+
+/*** 
+	Material Design Switches for Bootstrap 4 and Material Design Bootstrap (MDB)
+	by djibe
+	JSFiddle : https://jsfiddle.net/djibe89/9deak9dh/
+***/
+
+.material-switch>input[type="checkbox"] {
+    display: none;
+}
+
+.material-switch>label {
+    cursor: pointer;
+    height: 0px;
+    position: relative;
+    top: 2px;
+    width: 40px;
+}
+
+.material-switch>label::before {
+    background: rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position: absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+
+.material-switch>label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+
+.material-switch>input[type="checkbox"]:checked+label::before {
+    background: #d9534f;
+    opacity: 0.5;
+}
+
+.material-switch>input[type="checkbox"]:checked+label::after {
+    background: #d9534f;
+    left: 20px;
+}
